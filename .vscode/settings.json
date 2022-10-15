@@ -1,0 +1,22 @@
+{
+    "docwriter.style": "Doxygen",
+    "files.associations": {
+        "*.excalidraw": "json",
+        "*.excalidrawlib": "json",
+        "__config": "c",
+        "list.h": "c",
+        "stdlib.h": "c",
+        "__hash_table": "c",
+        "__split_buffer": "c",
+        "array": "c",
+        "bitset": "c",
+        "initializer_list": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "string": "c",
+        "string_view": "c",
+        "utility": "c"
+    },
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "C_Cpp.errorSquiggles": "Disabled"
+}

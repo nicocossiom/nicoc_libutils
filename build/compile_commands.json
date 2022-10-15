@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/nicolascossio/code/nicoc_libutils/build",
+  "command": "/usr/bin/clang -Dlist_EXPORTS -I/Users/nicolascossio/code/nicoc_libutils/src/list -I/Users/nicolascossio/code/nicoc_libutils/src/map -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIC -std=gnu99 -o test/map/CMakeFiles/list.dir/list.c.o -c /Users/nicolascossio/code/nicoc_libutils/src/list/list.c",
+  "file": "/Users/nicolascossio/code/nicoc_libutils/src/list/list.c"
+}
+]

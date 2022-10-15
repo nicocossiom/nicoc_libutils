@@ -1,0 +1,6 @@
+# ninja log v5
+3	138	1665828106811543502	CMakeFiles/nicoc_libutils.dir/src/list.c.o	874385a17f125a17
+2	184	1665832199189179367	test/map/CMakeFiles/list.dir/list.c.o	de83d4ad54fcf754
+1	55	1665826602024950779	CMakeFiles/nicoc_libutils.dir/nicoc_libutils.c.o	c3346603f35fd446
+2	8	0	clean	1f0117926fe85a19
+184	254	1665832199259554619	test/map/liblist.dylib	9eaedbf5674484c3

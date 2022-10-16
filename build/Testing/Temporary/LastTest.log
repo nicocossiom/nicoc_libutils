@@ -1,3 +1,219 @@
-Start testing: Oct 15 14:26 CEST
+Start testing: Oct 16 14:06 CEST
 ----------------------------------------------------------
-End testing: Oct 15 14:26 CEST
+1/8 Testing: TestListEmptyCreation.BasicAssertions
+1/8 Test: TestListEmptyCreation.BasicAssertions
+Command: "/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests" "--gtest_filter=TestListEmptyCreation.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: /Users/pepperonico/code/nicoc_libutils/build/test
+"TestListEmptyCreation.BasicAssertions" start time: Oct 16 14:06 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestListEmptyCreation.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestListEmptyCreation
+[ RUN      ] TestListEmptyCreation.BasicAssertions
+[       OK ] TestListEmptyCreation.BasicAssertions (0 ms)
+[----------] 1 test from TestListEmptyCreation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestListEmptyCreation.BasicAssertions" end time: Oct 16 14:06 CEST
+"TestListEmptyCreation.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/8 Testing: TestListAppendNullListFail.BasicAssertions
+2/8 Test: TestListAppendNullListFail.BasicAssertions
+Command: "/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests" "--gtest_filter=TestListAppendNullListFail.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: /Users/pepperonico/code/nicoc_libutils/build/test
+"TestListAppendNullListFail.BasicAssertions" start time: Oct 16 14:06 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestListAppendNullListFail.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestListAppendNullListFail
+[ RUN      ] TestListAppendNullListFail.BasicAssertions
+[       OK ] TestListAppendNullListFail.BasicAssertions (0 ms)
+[----------] 1 test from TestListAppendNullListFail (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestListAppendNullListFail.BasicAssertions" end time: Oct 16 14:06 CEST
+"TestListAppendNullListFail.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/8 Testing: TestListAppend1Elem.BasicAssertions
+3/8 Test: TestListAppend1Elem.BasicAssertions
+Command: "/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests" "--gtest_filter=TestListAppend1Elem.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: /Users/pepperonico/code/nicoc_libutils/build/test
+"TestListAppend1Elem.BasicAssertions" start time: Oct 16 14:06 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestListAppend1Elem.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestListAppend1Elem
+[ RUN      ] TestListAppend1Elem.BasicAssertions
+[       OK ] TestListAppend1Elem.BasicAssertions (0 ms)
+[----------] 1 test from TestListAppend1Elem (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestListAppend1Elem.BasicAssertions" end time: Oct 16 14:06 CEST
+"TestListAppend1Elem.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/8 Testing: TestListAppend2Elem.BasicAssertions
+4/8 Test: TestListAppend2Elem.BasicAssertions
+Command: "/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests" "--gtest_filter=TestListAppend2Elem.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: /Users/pepperonico/code/nicoc_libutils/build/test
+"TestListAppend2Elem.BasicAssertions" start time: Oct 16 14:06 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestListAppend2Elem.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestListAppend2Elem
+[ RUN      ] TestListAppend2Elem.BasicAssertions
+[       OK ] TestListAppend2Elem.BasicAssertions (0 ms)
+[----------] 1 test from TestListAppend2Elem (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestListAppend2Elem.BasicAssertions" end time: Oct 16 14:06 CEST
+"TestListAppend2Elem.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/8 Testing: TestListPrependNullListFail.BasicAssertions
+5/8 Test: TestListPrependNullListFail.BasicAssertions
+Command: "/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests" "--gtest_filter=TestListPrependNullListFail.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: /Users/pepperonico/code/nicoc_libutils/build/test
+"TestListPrependNullListFail.BasicAssertions" start time: Oct 16 14:06 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestListPrependNullListFail.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestListPrependNullListFail
+[ RUN      ] TestListPrependNullListFail.BasicAssertions
+[       OK ] TestListPrependNullListFail.BasicAssertions (0 ms)
+[----------] 1 test from TestListPrependNullListFail (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestListPrependNullListFail.BasicAssertions" end time: Oct 16 14:06 CEST
+"TestListPrependNullListFail.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/8 Testing: TestListPrepend1Elem.BasicAssertions
+6/8 Test: TestListPrepend1Elem.BasicAssertions
+Command: "/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests" "--gtest_filter=TestListPrepend1Elem.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: /Users/pepperonico/code/nicoc_libutils/build/test
+"TestListPrepend1Elem.BasicAssertions" start time: Oct 16 14:06 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestListPrepend1Elem.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestListPrepend1Elem
+[ RUN      ] TestListPrepend1Elem.BasicAssertions
+[       OK ] TestListPrepend1Elem.BasicAssertions (0 ms)
+[----------] 1 test from TestListPrepend1Elem (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestListPrepend1Elem.BasicAssertions" end time: Oct 16 14:06 CEST
+"TestListPrepend1Elem.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/8 Testing: TestListPrepend2Elem.BasicAssertions
+7/8 Test: TestListPrepend2Elem.BasicAssertions
+Command: "/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests" "--gtest_filter=TestListPrepend2Elem.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: /Users/pepperonico/code/nicoc_libutils/build/test
+"TestListPrepend2Elem.BasicAssertions" start time: Oct 16 14:06 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestListPrepend2Elem.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestListPrepend2Elem
+[ RUN      ] TestListPrepend2Elem.BasicAssertions
+[       OK ] TestListPrepend2Elem.BasicAssertions (0 ms)
+[----------] 1 test from TestListPrepend2Elem (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestListPrepend2Elem.BasicAssertions" end time: Oct 16 14:06 CEST
+"TestListPrepend2Elem.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/8 Testing: TestListReplaceAt.BasicAssertions
+8/8 Test: TestListReplaceAt.BasicAssertions
+Command: "/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests" "--gtest_filter=TestListReplaceAt.BasicAssertions" "--gtest_also_run_disabled_tests"
+Directory: /Users/pepperonico/code/nicoc_libutils/build/test
+"TestListReplaceAt.BasicAssertions" start time: Oct 16 14:06 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestListReplaceAt.BasicAssertions
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestListReplaceAt
+[ RUN      ] TestListReplaceAt.BasicAssertions
+[       OK ] TestListReplaceAt.BasicAssertions (0 ms)
+[----------] 1 test from TestListReplaceAt (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestListReplaceAt.BasicAssertions" end time: Oct 16 14:06 CEST
+"TestListReplaceAt.BasicAssertions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 16 14:06 CEST

@@ -1,7 +1,32 @@
 [
 {
-  "directory": "/Users/nicolascossio/code/nicoc_libutils/build",
-  "command": "/usr/bin/clang -Dlist_EXPORTS -I/Users/nicolascossio/code/nicoc_libutils/src/list -I/Users/nicolascossio/code/nicoc_libutils/src/map -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIC -std=gnu99 -o test/map/CMakeFiles/list.dir/list.c.o -c /Users/nicolascossio/code/nicoc_libutils/src/list/list.c",
-  "file": "/Users/nicolascossio/code/nicoc_libutils/src/list/list.c"
+  "directory": "/Users/pepperonico/code/nicoc_libutils/build",
+  "command": "/usr/bin/clang++ -I/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/include -I/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++11 -o _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/Users/pepperonico/code/nicoc_libutils/build",
+  "command": "/usr/bin/clang++ -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++11 -o _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/Users/pepperonico/code/nicoc_libutils/build",
+  "command": "/usr/bin/clang++ -I/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -I/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++11 -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/Users/pepperonico/code/nicoc_libutils/build",
+  "command": "/usr/bin/clang++ -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++11 -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/Users/pepperonico/code/nicoc_libutils/build",
+  "command": "/usr/bin/clang -Dlinked_list_EXPORTS -I/Users/pepperonico/code/nicoc_libutils/src/list -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC -std=gnu99 -o src/include/CMakeFiles/linked_list.dir/linked_list.c.o -c /Users/pepperonico/code/nicoc_libutils/src/list/linked_list.c",
+  "file": "/Users/pepperonico/code/nicoc_libutils/src/list/linked_list.c"
+},
+{
+  "directory": "/Users/pepperonico/code/nicoc_libutils/build",
+  "command": "/usr/bin/clang++ -I/Users/pepperonico/code/nicoc_libutils/src/list -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -o test/CMakeFiles/linked_list_tests.dir/list_tests.cc.o -c /Users/pepperonico/code/nicoc_libutils/test/list_tests.cc",
+  "file": "/Users/pepperonico/code/nicoc_libutils/test/list_tests.cc"
 }
 ]

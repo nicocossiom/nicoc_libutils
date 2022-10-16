@@ -36,7 +36,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/nicolascossio/code/nicoc_libutils/build/
+cmake_ninja_workdir = /Users/pepperonico/code/nicoc_libutils/build/
 
 #############################################
 # Utility command for Experimental
@@ -210,7 +210,7 @@ build ContinuousSubmit: phony CMakeFiles/ContinuousSubmit
 # Utility command for package
 
 build CMakeFiles/package.util: CUSTOM_COMMAND all
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
   DESC = Run CPack packaging tool...
   pool = console
   restat = 1
@@ -222,7 +222,7 @@ build package: phony CMakeFiles/package.util
 # Utility command for package_source
 
 build CMakeFiles/package_source.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/nicolascossio/code/nicoc_libutils/build/CPackSourceConfig.cmake
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/pepperonico/code/nicoc_libutils/build/CPackSourceConfig.cmake
   DESC = Run CPack packaging tool for source...
   pool = console
   restat = 1
@@ -234,7 +234,7 @@ build package_source: phony CMakeFiles/package_source.util
 # Utility command for test
 
 build CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -246,7 +246,7 @@ build test: phony CMakeFiles/test.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/nicolascossio/code/nicoc_libutils -B/Users/nicolascossio/code/nicoc_libutils/build
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -258,7 +258,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/nicolascossio/code/nicoc_libutils -B/Users/nicolascossio/code/nicoc_libutils/build
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -267,10 +267,52 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 
 #############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+
+#############################################
 # Custom command for CMakeFiles/Experimental
 
 build CMakeFiles/Experimental | ${cmake_ninja_workdir}CMakeFiles/Experimental: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D Experimental
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D Experimental
   pool = console
 
 
@@ -278,7 +320,7 @@ build CMakeFiles/Experimental | ${cmake_ninja_workdir}CMakeFiles/Experimental: C
 # Custom command for CMakeFiles/Nightly
 
 build CMakeFiles/Nightly | ${cmake_ninja_workdir}CMakeFiles/Nightly: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D Nightly
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D Nightly
   pool = console
 
 
@@ -286,7 +328,7 @@ build CMakeFiles/Nightly | ${cmake_ninja_workdir}CMakeFiles/Nightly: CUSTOM_COMM
 # Custom command for CMakeFiles/Continuous
 
 build CMakeFiles/Continuous | ${cmake_ninja_workdir}CMakeFiles/Continuous: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D Continuous
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D Continuous
   pool = console
 
 
@@ -294,7 +336,7 @@ build CMakeFiles/Continuous | ${cmake_ninja_workdir}CMakeFiles/Continuous: CUSTO
 # Custom command for CMakeFiles/NightlyMemoryCheck
 
 build CMakeFiles/NightlyMemoryCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemoryCheck: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyMemoryCheck
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyMemoryCheck
   pool = console
 
 
@@ -302,7 +344,7 @@ build CMakeFiles/NightlyMemoryCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMe
 # Custom command for CMakeFiles/NightlyStart
 
 build CMakeFiles/NightlyStart | ${cmake_ninja_workdir}CMakeFiles/NightlyStart: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyStart
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyStart
   pool = console
 
 
@@ -310,7 +352,7 @@ build CMakeFiles/NightlyStart | ${cmake_ninja_workdir}CMakeFiles/NightlyStart: C
 # Custom command for CMakeFiles/NightlyUpdate
 
 build CMakeFiles/NightlyUpdate | ${cmake_ninja_workdir}CMakeFiles/NightlyUpdate: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyUpdate
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyUpdate
   pool = console
 
 
@@ -318,7 +360,7 @@ build CMakeFiles/NightlyUpdate | ${cmake_ninja_workdir}CMakeFiles/NightlyUpdate:
 # Custom command for CMakeFiles/NightlyConfigure
 
 build CMakeFiles/NightlyConfigure | ${cmake_ninja_workdir}CMakeFiles/NightlyConfigure: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyConfigure
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyConfigure
   pool = console
 
 
@@ -326,7 +368,7 @@ build CMakeFiles/NightlyConfigure | ${cmake_ninja_workdir}CMakeFiles/NightlyConf
 # Custom command for CMakeFiles/NightlyBuild
 
 build CMakeFiles/NightlyBuild | ${cmake_ninja_workdir}CMakeFiles/NightlyBuild: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyBuild
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyBuild
   pool = console
 
 
@@ -334,7 +376,7 @@ build CMakeFiles/NightlyBuild | ${cmake_ninja_workdir}CMakeFiles/NightlyBuild: C
 # Custom command for CMakeFiles/NightlyTest
 
 build CMakeFiles/NightlyTest | ${cmake_ninja_workdir}CMakeFiles/NightlyTest: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyTest
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyTest
   pool = console
 
 
@@ -342,7 +384,7 @@ build CMakeFiles/NightlyTest | ${cmake_ninja_workdir}CMakeFiles/NightlyTest: CUS
 # Custom command for CMakeFiles/NightlyCoverage
 
 build CMakeFiles/NightlyCoverage | ${cmake_ninja_workdir}CMakeFiles/NightlyCoverage: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyCoverage
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyCoverage
   pool = console
 
 
@@ -350,7 +392,7 @@ build CMakeFiles/NightlyCoverage | ${cmake_ninja_workdir}CMakeFiles/NightlyCover
 # Custom command for CMakeFiles/NightlyMemCheck
 
 build CMakeFiles/NightlyMemCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemCheck: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyMemCheck
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlyMemCheck
   pool = console
 
 
@@ -358,7 +400,7 @@ build CMakeFiles/NightlyMemCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemCh
 # Custom command for CMakeFiles/NightlySubmit
 
 build CMakeFiles/NightlySubmit | ${cmake_ninja_workdir}CMakeFiles/NightlySubmit: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlySubmit
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D NightlySubmit
   pool = console
 
 
@@ -366,7 +408,7 @@ build CMakeFiles/NightlySubmit | ${cmake_ninja_workdir}CMakeFiles/NightlySubmit:
 # Custom command for CMakeFiles/ExperimentalStart
 
 build CMakeFiles/ExperimentalStart | ${cmake_ninja_workdir}CMakeFiles/ExperimentalStart: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalStart
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalStart
   pool = console
 
 
@@ -374,7 +416,7 @@ build CMakeFiles/ExperimentalStart | ${cmake_ninja_workdir}CMakeFiles/Experiment
 # Custom command for CMakeFiles/ExperimentalUpdate
 
 build CMakeFiles/ExperimentalUpdate | ${cmake_ninja_workdir}CMakeFiles/ExperimentalUpdate: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalUpdate
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalUpdate
   pool = console
 
 
@@ -382,7 +424,7 @@ build CMakeFiles/ExperimentalUpdate | ${cmake_ninja_workdir}CMakeFiles/Experimen
 # Custom command for CMakeFiles/ExperimentalConfigure
 
 build CMakeFiles/ExperimentalConfigure | ${cmake_ninja_workdir}CMakeFiles/ExperimentalConfigure: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalConfigure
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalConfigure
   pool = console
 
 
@@ -390,7 +432,7 @@ build CMakeFiles/ExperimentalConfigure | ${cmake_ninja_workdir}CMakeFiles/Experi
 # Custom command for CMakeFiles/ExperimentalBuild
 
 build CMakeFiles/ExperimentalBuild | ${cmake_ninja_workdir}CMakeFiles/ExperimentalBuild: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalBuild
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalBuild
   pool = console
 
 
@@ -398,7 +440,7 @@ build CMakeFiles/ExperimentalBuild | ${cmake_ninja_workdir}CMakeFiles/Experiment
 # Custom command for CMakeFiles/ExperimentalTest
 
 build CMakeFiles/ExperimentalTest | ${cmake_ninja_workdir}CMakeFiles/ExperimentalTest: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalTest
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalTest
   pool = console
 
 
@@ -406,7 +448,7 @@ build CMakeFiles/ExperimentalTest | ${cmake_ninja_workdir}CMakeFiles/Experimenta
 # Custom command for CMakeFiles/ExperimentalCoverage
 
 build CMakeFiles/ExperimentalCoverage | ${cmake_ninja_workdir}CMakeFiles/ExperimentalCoverage: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalCoverage
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalCoverage
   pool = console
 
 
@@ -414,7 +456,7 @@ build CMakeFiles/ExperimentalCoverage | ${cmake_ninja_workdir}CMakeFiles/Experim
 # Custom command for CMakeFiles/ExperimentalMemCheck
 
 build CMakeFiles/ExperimentalMemCheck | ${cmake_ninja_workdir}CMakeFiles/ExperimentalMemCheck: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalMemCheck
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalMemCheck
   pool = console
 
 
@@ -422,7 +464,7 @@ build CMakeFiles/ExperimentalMemCheck | ${cmake_ninja_workdir}CMakeFiles/Experim
 # Custom command for CMakeFiles/ExperimentalSubmit
 
 build CMakeFiles/ExperimentalSubmit | ${cmake_ninja_workdir}CMakeFiles/ExperimentalSubmit: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalSubmit
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ExperimentalSubmit
   pool = console
 
 
@@ -430,7 +472,7 @@ build CMakeFiles/ExperimentalSubmit | ${cmake_ninja_workdir}CMakeFiles/Experimen
 # Custom command for CMakeFiles/ContinuousStart
 
 build CMakeFiles/ContinuousStart | ${cmake_ninja_workdir}CMakeFiles/ContinuousStart: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousStart
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousStart
   pool = console
 
 
@@ -438,7 +480,7 @@ build CMakeFiles/ContinuousStart | ${cmake_ninja_workdir}CMakeFiles/ContinuousSt
 # Custom command for CMakeFiles/ContinuousUpdate
 
 build CMakeFiles/ContinuousUpdate | ${cmake_ninja_workdir}CMakeFiles/ContinuousUpdate: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousUpdate
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousUpdate
   pool = console
 
 
@@ -446,7 +488,7 @@ build CMakeFiles/ContinuousUpdate | ${cmake_ninja_workdir}CMakeFiles/ContinuousU
 # Custom command for CMakeFiles/ContinuousConfigure
 
 build CMakeFiles/ContinuousConfigure | ${cmake_ninja_workdir}CMakeFiles/ContinuousConfigure: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousConfigure
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousConfigure
   pool = console
 
 
@@ -454,7 +496,7 @@ build CMakeFiles/ContinuousConfigure | ${cmake_ninja_workdir}CMakeFiles/Continuo
 # Custom command for CMakeFiles/ContinuousBuild
 
 build CMakeFiles/ContinuousBuild | ${cmake_ninja_workdir}CMakeFiles/ContinuousBuild: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousBuild
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousBuild
   pool = console
 
 
@@ -462,7 +504,7 @@ build CMakeFiles/ContinuousBuild | ${cmake_ninja_workdir}CMakeFiles/ContinuousBu
 # Custom command for CMakeFiles/ContinuousTest
 
 build CMakeFiles/ContinuousTest | ${cmake_ninja_workdir}CMakeFiles/ContinuousTest: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousTest
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousTest
   pool = console
 
 
@@ -470,7 +512,7 @@ build CMakeFiles/ContinuousTest | ${cmake_ninja_workdir}CMakeFiles/ContinuousTes
 # Custom command for CMakeFiles/ContinuousCoverage
 
 build CMakeFiles/ContinuousCoverage | ${cmake_ninja_workdir}CMakeFiles/ContinuousCoverage: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousCoverage
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousCoverage
   pool = console
 
 
@@ -478,7 +520,7 @@ build CMakeFiles/ContinuousCoverage | ${cmake_ninja_workdir}CMakeFiles/Continuou
 # Custom command for CMakeFiles/ContinuousMemCheck
 
 build CMakeFiles/ContinuousMemCheck | ${cmake_ninja_workdir}CMakeFiles/ContinuousMemCheck: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousMemCheck
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousMemCheck
   pool = console
 
 
@@ -486,20 +528,758 @@ build CMakeFiles/ContinuousMemCheck | ${cmake_ninja_workdir}CMakeFiles/Continuou
 # Custom command for CMakeFiles/ContinuousSubmit
 
 build CMakeFiles/ContinuousSubmit | ${cmake_ninja_workdir}CMakeFiles/ContinuousSubmit: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousSubmit
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest -D ContinuousSubmit
   pool = console
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/nicolascossio/code/nicoc_libutils/CMakeLists.txt
+# /Users/pepperonico/code/nicoc_libutils/CMakeLists.txt
 # =============================================================================
 
 
 #############################################
 # Utility command for package
 
+build _deps/googletest-build/CMakeFiles/package.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/package: phony _deps/googletest-build/CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build _deps/googletest-build/CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/pepperonico/code/nicoc_libutils/build/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/package_source: phony _deps/googletest-build/CMakeFiles/package_source.util
+
+
+#############################################
+# Utility command for test
+
+build _deps/googletest-build/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/test: phony _deps/googletest-build/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/googletest-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/edit_cache: phony _deps/googletest-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/googletest-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/rebuild_cache: phony _deps/googletest-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/googletest-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/googletest-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/install: phony _deps/googletest-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/googletest-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/install/local: phony _deps/googletest-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/googletest-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/install/strip: phony _deps/googletest-build/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_Debug /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++11
+  INCLUDES = -I/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/include -I/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib/libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtest.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_Debug /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++11
+  INCLUDES = -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib/libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmock.a lib/libgtest.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for package
+
+build _deps/googletest-build/googlemock/CMakeFiles/package.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/package: phony _deps/googletest-build/googlemock/CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build _deps/googletest-build/googlemock/CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/pepperonico/code/nicoc_libutils/build/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/package_source: phony _deps/googletest-build/googlemock/CMakeFiles/package_source.util
+
+
+#############################################
+# Utility command for test
+
+build _deps/googletest-build/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googlemock && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/test: phony _deps/googletest-build/googlemock/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googlemock && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/edit_cache: phony _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googlemock && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/rebuild_cache: phony _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/googletest-build/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/googletest-build/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googlemock && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/install: phony _deps/googletest-build/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/googletest-build/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googlemock && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/install/local: phony _deps/googletest-build/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/googletest-build/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googlemock && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googlemock/install/strip: phony _deps/googletest-build/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+
+build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_Debug /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++11
+  INCLUDES = -I/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -I/Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib/libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_Debug /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk  -DGTEST_HAS_PTHREAD=1   -std=c++11
+  INCLUDES = -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib/libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtest.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for package
+
+build _deps/googletest-build/googletest/CMakeFiles/package.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/package: phony _deps/googletest-build/googletest/CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build _deps/googletest-build/googletest/CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/pepperonico/code/nicoc_libutils/build/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/package_source: phony _deps/googletest-build/googletest/CMakeFiles/package_source.util
+
+
+#############################################
+# Utility command for test
+
+build _deps/googletest-build/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googletest && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/test: phony _deps/googletest-build/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/googletest-build/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googletest && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/edit_cache: phony _deps/googletest-build/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googletest && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/rebuild_cache: phony _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/googletest-build/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/googletest-build/googletest/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googletest && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/install: phony _deps/googletest-build/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/googletest-build/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googletest && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/install/local: phony _deps/googletest-build/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/googletest-build/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googletest && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-build/googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/pepperonico/code/nicoc_libutils/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for package
+
+build src/CMakeFiles/package.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build src/package: phony src/CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build src/CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/pepperonico/code/nicoc_libutils/build/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build src/package_source: phony src/CMakeFiles/package_source.util
+
+
+#############################################
+# Utility command for test
+
+build src/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build src/test: phony src/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build src/edit_cache: phony src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/CMakeFiles/install.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/install: phony src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/CMakeFiles/install/local.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/install/local: phony src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/install/strip: phony src/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/pepperonico/code/nicoc_libutils/src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target linked_list
+
+
+#############################################
+# Order-only phony target for linked_list
+
+build cmake_object_order_depends_target_linked_list: phony || src/include/CMakeFiles/linked_list.dir
+
+build src/include/CMakeFiles/linked_list.dir/linked_list.c.o: C_COMPILER__linked_list_Debug /Users/pepperonico/code/nicoc_libutils/src/list/linked_list.c || cmake_object_order_depends_target_linked_list
+  DEFINES = -Dlinked_list_EXPORTS
+  DEP_FILE = src/include/CMakeFiles/linked_list.dir/linked_list.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -fPIC -std=gnu99
+  INCLUDES = -I/Users/pepperonico/code/nicoc_libutils/src/list
+  OBJECT_DIR = src/include/CMakeFiles/linked_list.dir
+  OBJECT_FILE_DIR = src/include/CMakeFiles/linked_list.dir
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target linked_list
+
+
+#############################################
+# Link the shared library lib/liblinked_list.dylib
+
+build lib/liblinked_list.dylib: C_SHARED_LIBRARY_LINKER__linked_list_Debug src/include/CMakeFiles/linked_list.dir/linked_list.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  INSTALLNAME_DIR = @rpath/
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/include/CMakeFiles/linked_list.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  SONAME = liblinked_list.dylib
+  SONAME_FLAG = -install_name
+  TARGET_FILE = lib/liblinked_list.dylib
+  TARGET_PDB = linked_list.dylib.dbg
+
+
+#############################################
+# Utility command for package
+
+build src/include/CMakeFiles/package.util: CUSTOM_COMMAND src/include/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build src/include/package: phony src/include/CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build src/include/CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/pepperonico/code/nicoc_libutils/build/CPackSourceConfig.cmake
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build src/include/package_source: phony src/include/CMakeFiles/package_source.util
+
+
+#############################################
+# Utility command for test
+
+build src/include/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src/include && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build src/include/test: phony src/include/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/include/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src/include && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build src/include/edit_cache: phony src/include/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/include/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src/include && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/include/rebuild_cache: phony src/include/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/include/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/include/CMakeFiles/install.util: CUSTOM_COMMAND src/include/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src/include && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/include/install: phony src/include/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/include/CMakeFiles/install/local.util: CUSTOM_COMMAND src/include/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src/include && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/include/install/local: phony src/include/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/include/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/include/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/src/include && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/include/install/strip: phony src/include/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/pepperonico/code/nicoc_libutils/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target linked_list_tests
+
+
+#############################################
+# Order-only phony target for linked_list_tests
+
+build cmake_object_order_depends_target_linked_list_tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_linked_list
+
+build test/CMakeFiles/linked_list_tests.dir/list_tests.cc.o: CXX_COMPILER__linked_list_tests_Debug /Users/pepperonico/code/nicoc_libutils/test/list_tests.cc || cmake_object_order_depends_target_linked_list_tests
+  DEP_FILE = test/CMakeFiles/linked_list_tests.dir/list_tests.cc.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11
+  INCLUDES = -I/Users/pepperonico/code/nicoc_libutils/src/list -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest/include -isystem /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-src/googletest
+  OBJECT_DIR = test/CMakeFiles/linked_list_tests.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/linked_list_tests.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target linked_list_tests
+
+
+#############################################
+# Link the executable test/linked_list_tests
+
+build test/linked_list_tests test/linked_list_tests[1]_tests.cmake | ${cmake_ninja_workdir}test/linked_list_tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__linked_list_tests_Debug test/CMakeFiles/linked_list_tests.dir/list_tests.cc.o | lib/libgtest_main.a lib/liblinked_list.dylib lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a lib/liblinked_list.dylib
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/Users/pepperonico/code/nicoc_libutils/build/lib  lib/libgtest_main.a  lib/liblinked_list.dylib  lib/libgtest.a
+  OBJECT_DIR = test/CMakeFiles/linked_list_tests.dir
+  POST_BUILD = cd /Users/pepperonico/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -D TEST_TARGET=linked_list_tests -D TEST_EXECUTABLE=/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/pepperonico/code/nicoc_libutils/build/test -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=linked_list_tests_TESTS -D CTEST_FILE=/Users/pepperonico/code/nicoc_libutils/build/test/linked_list_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/GoogleTestAddTests.cmake
+  PRE_LINK = :
+  RESTAT = 1
+  TARGET_FILE = test/linked_list_tests
+  TARGET_PDB = linked_list_tests.dbg
+
+
+#############################################
+# Utility command for package
+
 build test/CMakeFiles/package.util: CUSTOM_COMMAND test/all
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
   DESC = Run CPack packaging tool...
   pool = console
   restat = 1
@@ -511,7 +1291,7 @@ build test/package: phony test/CMakeFiles/package.util
 # Utility command for package_source
 
 build test/CMakeFiles/package_source.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/nicolascossio/code/nicoc_libutils/build/CPackSourceConfig.cmake
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/pepperonico/code/nicoc_libutils/build/CPackSourceConfig.cmake
   DESC = Run CPack packaging tool for source...
   pool = console
   restat = 1
@@ -523,7 +1303,7 @@ build test/package_source: phony test/CMakeFiles/package_source.util
 # Utility command for test
 
 build test/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -535,7 +1315,7 @@ build test/test: phony test/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/nicolascossio/code/nicoc_libutils -B/Users/nicolascossio/code/nicoc_libutils/build
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -547,121 +1327,79 @@ build test/edit_cache: phony test/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build test/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/nicolascossio/code/nicoc_libutils -B/Users/nicolascossio/code/nicoc_libutils/build
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/pepperonico/code/nicoc_libutils -B/Users/pepperonico/code/nicoc_libutils/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
 build test/rebuild_cache: phony test/CMakeFiles/rebuild_cache.util
 
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /Users/nicolascossio/code/nicoc_libutils/src/CMakeLists.txt
-# =============================================================================
 
-# =============================================================================
-# Object build statements for SHARED_LIBRARY target list
+#############################################
+# Utility command for list_install_components
+
+build test/list_install_components: phony
 
 
 #############################################
-# Order-only phony target for list
+# Utility command for install
 
-build cmake_object_order_depends_target_list: phony || test/map/CMakeFiles/list.dir
-
-build test/map/CMakeFiles/list.dir/list.c.o: C_COMPILER__list_Debug /Users/nicolascossio/code/nicoc_libutils/src/list/list.c || cmake_object_order_depends_target_list
-  DEFINES = -Dlist_EXPORTS
-  DEP_FILE = test/map/CMakeFiles/list.dir/list.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIC -std=gnu99
-  INCLUDES = -I/Users/nicolascossio/code/nicoc_libutils/src/list -I/Users/nicolascossio/code/nicoc_libutils/src/map
-  OBJECT_DIR = test/map/CMakeFiles/list.dir
-  OBJECT_FILE_DIR = test/map/CMakeFiles/list.dir
-
-
-# =============================================================================
-# Link build statements for SHARED_LIBRARY target list
-
-
-#############################################
-# Link the shared library test/map/liblist.dylib
-
-build test/map/liblist.dylib: C_SHARED_LIBRARY_LINKER__list_Debug test/map/CMakeFiles/list.dir/list.c.o
-  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
-  INSTALLNAME_DIR = @rpath/
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = test/map/CMakeFiles/list.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  SONAME = liblist.dylib
-  SONAME_FLAG = -install_name
-  TARGET_FILE = test/map/liblist.dylib
-  TARGET_PDB = list.dylib.dbg
-
-
-#############################################
-# Utility command for package
-
-build test/map/CMakeFiles/package.util: CUSTOM_COMMAND test/map/all
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackConfig.cmake
-  DESC = Run CPack packaging tool...
+build test/CMakeFiles/install.util: CUSTOM_COMMAND test/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
   pool = console
   restat = 1
 
-build test/map/package: phony test/map/CMakeFiles/package.util
+build test/install: phony test/CMakeFiles/install.util
 
 
 #############################################
-# Utility command for package_source
+# Utility command for install/local
 
-build test/map/CMakeFiles/package_source.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build && /opt/homebrew/Cellar/cmake/3.24.2/bin/cpack --config ./CPackSourceConfig.cmake /Users/nicolascossio/code/nicoc_libutils/build/CPackSourceConfig.cmake
-  DESC = Run CPack packaging tool for source...
+build test/CMakeFiles/install/local.util: CUSTOM_COMMAND test/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build test/map/package_source: phony test/map/CMakeFiles/package_source.util
+build test/install/local: phony test/CMakeFiles/install/local.util
 
 
 #############################################
-# Utility command for test
+# Utility command for install/strip
 
-build test/map/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build/test/map && /opt/homebrew/Cellar/cmake/3.24.2/bin/ctest --force-new-ctest-process
-  DESC = Running tests...
+build test/CMakeFiles/install/strip.util: CUSTOM_COMMAND test/all
+  COMMAND = cd /Users/pepperonico/code/nicoc_libutils/build/test && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build test/map/test: phony test/map/CMakeFiles/test.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build test/map/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build/test/map && /opt/homebrew/Cellar/cmake/3.24.2/bin/ccmake -S/Users/nicolascossio/code/nicoc_libutils -B/Users/nicolascossio/code/nicoc_libutils/build
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build test/map/edit_cache: phony test/map/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build test/map/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/nicolascossio/code/nicoc_libutils/build/test/map && /opt/homebrew/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/nicolascossio/code/nicoc_libutils -B/Users/nicolascossio/code/nicoc_libutils/build
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build test/map/rebuild_cache: phony test/map/CMakeFiles/rebuild_cache.util
+build test/install/strip: phony test/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Target aliases.
 
-build liblist.dylib: phony test/map/liblist.dylib
+build gmock: phony lib/libgmock.a
 
-build list: phony test/map/liblist.dylib
+build gmock_main: phony lib/libgmock_main.a
+
+build gtest: phony lib/libgtest.a
+
+build gtest_main: phony lib/libgtest_main.a
+
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
+
+build liblinked_list.dylib: phony lib/liblinked_list.dylib
+
+build linked_list: phony lib/liblinked_list.dylib
+
+build linked_list_tests: phony test/linked_list_tests
 
 # =============================================================================
 # Folder targets.
@@ -669,23 +1407,51 @@ build list: phony test/map/liblist.dylib
 # =============================================================================
 
 #############################################
-# Folder: /Users/nicolascossio/code/nicoc_libutils/build
+# Folder: /Users/pepperonico/code/nicoc_libutils/build
 
-build all: phony test/all
-
-# =============================================================================
-
-#############################################
-# Folder: /Users/nicolascossio/code/nicoc_libutils/build/test
-
-build test/all: phony test/map/all
+build all: phony _deps/googletest-build/all src/all test/all
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/nicolascossio/code/nicoc_libutils/build/test/map
+# Folder: /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build
 
-build test/map/all: phony test/map/liblist.dylib
+build _deps/googletest-build/all: phony _deps/googletest-build/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googlemock
+
+build _deps/googletest-build/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a _deps/googletest-build/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/pepperonico/code/nicoc_libutils/build/_deps/googletest-build/googletest
+
+build _deps/googletest-build/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/pepperonico/code/nicoc_libutils/build/src
+
+build src/all: phony src/include/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/pepperonico/code/nicoc_libutils/build/src/include
+
+build src/include/all: phony lib/liblinked_list.dylib
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/pepperonico/code/nicoc_libutils/build/test
+
+build test/all: phony test/linked_list_tests
 
 # =============================================================================
 # Unknown Build Time Dependencies.
@@ -699,14 +1465,14 @@ build test/map/all: phony test/map/liblist.dylib
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/nicolascossio/code/nicoc_libutils/CMakeLists.txt /Users/nicolascossio/code/nicoc_libutils/src/CMakeLists.txt /Users/nicolascossio/code/nicoc_libutils/src/list/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CPack.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CPackComponent.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTest.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTestTargets.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTestUseLaunchers.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/DartConfiguration.tcl.in /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Users/pepperonico/code/nicoc_libutils/CMakeLists.txt /Users/pepperonico/code/nicoc_libutils/src/CMakeLists.txt /Users/pepperonico/code/nicoc_libutils/src/list/CMakeLists.txt /Users/pepperonico/code/nicoc_libutils/test/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDependentOption.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakePackageConfigHelpers.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CPack.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CPackComponent.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTest.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTestTargets.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTestUseLaunchers.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/DartConfiguration.tcl.in /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FetchContent.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FetchContent/CMakeLists.cmake.in /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindGit.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindPython.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindPython/Support.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindThreads.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/GoogleTest.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/WriteBasicConfigVersionFile.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/nicolascossio/code/nicoc_libutils/CMakeLists.txt /Users/nicolascossio/code/nicoc_libutils/src/CMakeLists.txt /Users/nicolascossio/code/nicoc_libutils/src/list/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CPack.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CPackComponent.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTest.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTestTargets.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTestUseLaunchers.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/DartConfiguration.tcl.in /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /Users/pepperonico/code/nicoc_libutils/CMakeLists.txt /Users/pepperonico/code/nicoc_libutils/src/CMakeLists.txt /Users/pepperonico/code/nicoc_libutils/src/list/CMakeLists.txt /Users/pepperonico/code/nicoc_libutils/test/CMakeLists.txt /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDependentOption.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakePackageConfigHelpers.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CPack.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CPackComponent.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTest.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTestTargets.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CTestUseLaunchers.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CheckCSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CheckIncludeFile.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/CheckLibraryExists.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/DartConfiguration.tcl.in /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FetchContent.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FetchContent/CMakeLists.cmake.in /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindGit.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindPackageMessage.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindPython.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindPython/Support.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/FindThreads.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/GNUInstallDirs.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/GoogleTest.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Modules/WriteBasicConfigVersionFile.cmake /opt/homebrew/Cellar/cmake/3.24.2/share/cmake/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
 
 
 #############################################

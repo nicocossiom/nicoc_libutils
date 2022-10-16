@@ -1,2 +1,15 @@
-list_tests 0 0
+hello_test_NOT_BUILT 0 0
+HelloTest.BasicAssertions 1 0.00596579
+ListEmptyCreation.BasicAssertions 1 0.00477942
+TestListEmptyCreation.BasicAssertions 13 0.000357827
+TestListAppend.BasicAssertions 5 0.0005107
+TestListAppendNullListFail.BasicAssertions 9 0.000448722
+TestListprependNullListFail.BasicAssertions 1 0.00341088
+TestListprepend.BasicAssertions 1 0.00278904
+TestListAppend1Elem.BasicAssertions 7 0.000579101
+TestListAppend2Elem.BasicAssertions 6 0.000627292
+TestListPrependNullListFail.BasicAssertions 5 0.000675667
+TestListPrepend1Elem.BasicAssertions 5 0.000750958
+TestListPrepend2Elem.BasicAssertions 3 0.00102233
+TestListReplaceAt.BasicAssertions 2 0.00151706
 ---
